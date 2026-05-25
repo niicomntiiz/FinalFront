@@ -1,6 +1,7 @@
 "use client"
 
 import { KeyboardEvent, useState } from "react"
+import "./styles.css"
 
 const ESTADOS = ["", "Alive", "Dead", "unknown"]
 const GENEROS = ["", "Female", "Male", "Genderless", "unknown"]
@@ -33,16 +34,17 @@ const Filtros = ({ status, gender, onStatusChange, onGenderChange, onNameSearch 
     return (
         <div>
             <input
+                className="buscadorInput"
                 type="text"
                 placeholder="Busca un personaje"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKey}
             />
-            <button onClick={() => onNameSearch(input)}>Buscar</button>
+            <button className="botones" onClick={() => onNameSearch(input)}>Buscar</button>
 
-            <button onClick={cycleStatus}>Estado: {status || "Todos"}</button>
-            <button onClick={cycleGender}>Género: {gender || "Todos"}</button>
+            <button className="botones" onClick={cycleStatus}>Estado: {status || "Todos"}</button>
+            <button className="botones"  onClick={cycleGender}>Género: {gender || "Todos"}</button>
         </div>
     )
 }

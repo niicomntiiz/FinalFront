@@ -9,10 +9,6 @@ const NavigatorPages = () => {
 
     const enlaces: LinkType[] = [
         {
-            name: "Casa",
-            link: "/"
-        },
-        {
             name: "Personajes",
             link: "/Personajes"
         }

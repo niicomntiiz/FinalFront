@@ -1,0 +1,24 @@
+.botones {
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(182, 182, 182);
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buscadorInput {
+  height: 50px;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #F7F7F7;
+  box-shadow: 2px 2px 5px black;
+  font-size: 16px;
+  box-sizing: border-box;
+}

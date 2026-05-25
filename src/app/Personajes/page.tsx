@@ -70,7 +70,7 @@ const CharactersPage = () => {
             {!loading && sinResultados && <h1>No se han encontrado personajes con esos filtros.</h1>}
 
             {!loading && !sinResultados && resultCharacters && resultCharacters.results.map((e)=>(
-                <Link key={e.id} href={`Personaje/${e.id}`}>
+                <Link className="characterContainer"key={e.id} href={`Personaje/${e.id}`}>
                     <Personajillo personaje={e}/>
                 </Link>
             ))}
