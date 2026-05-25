@@ -32,12 +32,12 @@ const CharactersPage = () => {
         if (gender) params.gender = gender;
 
 
-        api.get("/character", { params })
-            .then((e)=>{
+        api.get("/character", { params }).then((e)=>{
                 const {data} : {data: ResultPersonajesT} = e;
                 setResultCharacters(data);
             })
-            .catch((error) => {
+            .catch((e) => {
+                alert(String(e));
                 setResultCharacters(null);
                 setSinResultados(true);
             })

@@ -1,12 +1,7 @@
-const Paginador = ({
-    page,
-    totalPages,
-    setPage
-}: {
-    page: number,
-    totalPages: number,
-    setPage: (page: number) => void
-}) => {
+const Paginador = ({page, totalPages, setPage}: {
+    page: number, 
+    totalPages: number, 
+    setPage: (page: number) => void}) => {
     if (!totalPages || totalPages <= 0) return null;
 
     const pagesSet = new Set<number>();
@@ -35,18 +30,11 @@ const Paginador = ({
                 </div>
             )}
 
-            <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                 {pages.map((p, i) => (
                     <span key={p} style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                         {i > 0 && pages[i] - pages[i - 1] > 1 && <span> ... </span>}
-                        <h1
-                            onClick={() => setPage(p)}
-                            style={{
-                                cursor: "pointer",
-                                opacity: p === page ? 1 : 0.5,
-                                transition: "opacity 0.2s"
-                            }}
-                        >
+                        <h1 onClick={() => setPage(p)} style={{cursor: "pointer", opacity: p === page ? 1 : 0.5, transition: "opacity 0.2s"}}>
                             {p}
                         </h1>
                     </span>

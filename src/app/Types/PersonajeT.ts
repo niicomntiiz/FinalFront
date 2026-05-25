@@ -1,5 +1,3 @@
-
-
 export type PersonajeT = {
       "id": number,
       "name": string,

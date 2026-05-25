@@ -12,8 +12,7 @@ const Personaje = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        api.get(`/character/${id}`)
-            .then((e) => setPersonaje(e.data))
+        api.get(`/character/${id}`).then((e) => setPersonaje(e.data))
             .catch((e) => alert(String(e)))
             .finally(() => setLoading(false))
     }, [])
