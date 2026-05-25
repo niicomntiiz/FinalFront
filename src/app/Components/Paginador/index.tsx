@@ -35,7 +35,7 @@ const Paginador = ({
                 </div>
             )}
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <div>
                 {pages.map((p, i) => (
                     <span key={p} style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                         {i > 0 && pages[i] - pages[i - 1] > 1 && <span> ... </span>}
