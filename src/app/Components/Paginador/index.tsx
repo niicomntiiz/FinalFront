@@ -22,7 +22,7 @@ const Paginador = ({page, totalPages, setPage}: {
     const hasNext = page < totalPages;
 
     return (
-        <div className="PaginadorContainer" style={{ gap: '20px' }}>
+        <div className="PaginadorContainer" >
             
             {hasPrev && (
                 <div className="arrowContainer" onClick={() => setPage(page - 1)}>

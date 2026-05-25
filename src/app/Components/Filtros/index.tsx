@@ -1,6 +1,6 @@
 "use client"
 
-import { KeyboardEvent, useState } from "react"
+import { useState } from "react"
 import "./styles.css"
 
 const ESTADOS = ["", "Alive", "Dead", "unknown"]
