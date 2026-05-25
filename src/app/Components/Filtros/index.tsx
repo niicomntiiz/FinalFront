@@ -27,9 +27,7 @@ const Filtros = ({ status, gender, onStatusChange, onGenderChange, onNameSearch 
         onGenderChange(GENEROS[next])
     }
 
-    const handleKey = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Enter") onNameSearch(input)
-    }
+
 
     return (
         <div>
@@ -39,7 +37,11 @@ const Filtros = ({ status, gender, onStatusChange, onGenderChange, onNameSearch 
                 placeholder="Busca un personaje"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKey}
+                onKeyDown={(e)=>{
+                    if(e.key=== "Enter"){
+                        onNameSearch(input);
+                    }
+                }}
             />
             <button className="botones" onClick={() => onNameSearch(input)}>Buscar</button>
 
